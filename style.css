@@ -1,0 +1,154 @@
+:root {
+
+    /* primary */
+--dark-cyan: hsl(158, 36%, 37%);
+--cream: hsl(30, 38%, 92%);
+
+    /* neutral */
+--very-dark-blue: hsl(212, 21%, 14%);
+--dark-grayish-blue: hsl(228, 12%, 48%);
+--white: hsl(0, 0%, 100%);
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    font-family: "Montserrat", sans-serif; 
+    font-size: 14px;
+    background-color: var(--cream);
+    color: var(--dark-grayish-blue);
+    display: grid;
+    place-content: center;
+    margin: 1rem;
+}
+
+p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+h1 {
+    font-family: "Fraunces", sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--very-dark-blue);
+}
+
+.mobile_img {
+    display: block;
+    width: 100%;
+}
+
+.desktop_img {
+    display: none;
+}
+
+.product {
+    display: grid;
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    max-width: 600px;
+}
+
+
+.description {
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.category {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding-top: 1rem;
+}
+
+.prices {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.sale-price {
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--dark-cyan);
+}
+
+.original-price {
+    text-decoration: line-through;
+}
+
+
+
+.button {
+    display: flex;
+    text-decoration: none;
+    cursor: pointer;
+    gap: 0.75rem;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    border-radius: 0.5rem;
+    padding: 0.75em 1.5em;
+    background-color: var(--dark-cyan);
+    color: var(--white);
+    font-size: 0.9rem;
+}
+
+.button:hover,
+.button:active {
+    background-color: hsl(158, 46%, 20%);
+}
+
+.attribution { 
+    font-size: 14px; 
+    text-align: center; 
+    margin-top: 1rem;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 600px) {
+    body {
+        margin-top: 150px;
+    }
+
+
+    .mobile_img {
+        display: none;
+    
+    }
+    .desktop_img {
+        display: block;
+        height: 400px;
+        
+    }
+
+    
+    .product {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 550px;
+        
+    }
+  
+}
